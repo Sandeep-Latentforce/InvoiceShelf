@@ -338,6 +338,43 @@ test('send invoice to customer', function () {
     Mail::assertSent(SendInvoiceMail::class);
 });
 
+test('send refuses an unpaid invoice with nothing due', function () {
+    Mail::fake();
+
+    $invoice = Invoice::factory()->create([
+        'paid_status' => Invoice::STATUS_UNPAID,
+        'due_amount' => 0,
+    ]);
+
+    postJson('api/v1/invoices/'.$invoice->id.'/send', [
+        'from' => 'john@example.com',
+        'to' => 'doe@example.com',
+        'subject' => 'email subject',
+        'body' => 'email body',
+    ])->assertUnprocessable()->assertJsonValidationErrors('invoice');
+
+    Mail::assertNotSent(SendInvoiceMail::class);
+    expect($invoice->fresh()->status)->toBe(Invoice::STATUS_DRAFT);
+});
+
+test('send still emails a paid invoice with nothing due', function () {
+    Mail::fake();
+
+    $invoice = Invoice::factory()->create([
+        'paid_status' => Invoice::STATUS_PAID,
+        'due_amount' => 0,
+    ]);
+
+    postJson('api/v1/invoices/'.$invoice->id.'/send', [
+        'from' => 'john@example.com',
+        'to' => 'doe@example.com',
+        'subject' => 'email subject',
+        'body' => 'email body',
+    ])->assertOk();
+
+    Mail::assertSent(SendInvoiceMail::class);
+});
+
 test('invoice status controller uses the change invoice status request', function () {
     $this->assertActionUsesFormRequest(
         InvoicesController::class,

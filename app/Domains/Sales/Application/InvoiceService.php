@@ -246,6 +246,8 @@ class InvoiceService implements InvoicePdfDataProvider
 
     public function send(Invoice $invoice, array $data): array
     {
+        $this->refuseUnpaidWithNothingDue($invoice);
+
         $data = $this->sendInvoiceData($invoice, $data);
 
         $this->mailConfigurator->applyCompanyConfig($invoice->company_id);
@@ -262,6 +264,23 @@ class InvoiceService implements InvoicePdfDataProvider
             'success' => true,
             'type' => 'send',
         ];
+    }
+
+    /**
+     * An unpaid invoice that says nothing is due has a wrong balance: emailing
+     * it tells the customer to pay 0. It is held instead, by the rule the
+     * reminder job already uses for who still owes money. Paid invoices and
+     * credit notes can still say 0.
+     */
+    private function refuseUnpaidWithNothingDue(Invoice $invoice): void
+    {
+        if (! $invoice->isCreditNote()
+            && in_array($invoice->paid_status, [Invoice::STATUS_UNPAID, Invoice::STATUS_PARTIALLY_PAID], true)
+            && (int) $invoice->due_amount <= 0) {
+            throw ValidationException::withMessages([
+                'invoice' => ['unpaid_invoice_has_no_amount_due'],
+            ]);
+        }
     }
 
     public function getPdfData(Invoice $invoice): mixed
