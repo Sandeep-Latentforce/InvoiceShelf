@@ -354,6 +354,7 @@ test('send refuses an unpaid invoice with nothing due', function () {
     ])->assertUnprocessable()->assertJsonValidationErrors('invoice');
 
     Mail::assertNotSent(SendInvoiceMail::class);
+    expect($invoice->fresh()->status)->toBe(Invoice::STATUS_DRAFT);
 });
 
 test('send still emails a paid invoice with nothing due', function () {
