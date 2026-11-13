@@ -2268,6 +2268,7 @@
     "invoice_already_fully_credited": "Bei dieser Rechnung gibt es nichts mehr zu stornieren.",
     "credit_quantity_exceeds_remaining": "Eine der Mengen übersteigt das, was bei dieser Position noch zu stornieren ist.",
     "credit_amount_exceeds_invoice_balance": "Der Stornobetrag übersteigt den offenen Betrag der Rechnung.",
+    "unpaid_invoice_has_no_amount_due": "This invoice is unpaid but its amount due is 0, so it was held instead of sent. Check the invoice total and payments.",
     "credit_note_must_credit_something": "Bitte mindestens eine Position mit einer zu stornierenden Menge auswählen.",
     "credit_item_not_on_invoice": "Eine der gewählten Positionen gehört nicht zu dieser Rechnung.",
     "credit_quantity_invalid": "Bitte für jede gewählte Position eine gültige Menge größer als null angeben.",

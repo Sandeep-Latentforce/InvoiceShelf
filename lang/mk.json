@@ -2269,6 +2269,7 @@
     "invoice_already_fully_credited": "На оваа фактура не останало ништо за сторнирање.",
     "credit_quantity_exceeds_remaining": "Една од количините е поголема од преостанатото за сторнирање на таа ставка.",
     "credit_amount_exceeds_invoice_balance": "Сторното е поголемо од преостанатото салдо на фактурата.",
+    "unpaid_invoice_has_no_amount_due": "This invoice is unpaid but its amount due is 0, so it was held instead of sent. Check the invoice total and payments.",
     "credit_note_must_credit_something": "Изберете барем една ставка со количина за сторнирање.",
     "credit_item_not_on_invoice": "Една од избраните ставки не припаѓа на оваа фактура.",
     "credit_quantity_invalid": "Внесете важечка количина поголема од нула за секоја избрана ставка.",
