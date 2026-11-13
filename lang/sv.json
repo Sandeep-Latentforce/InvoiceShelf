@@ -2269,6 +2269,7 @@
     "invoice_already_fully_credited": "Det finns inget kvar att kreditera på den här fakturan.",
     "credit_quantity_exceeds_remaining": "Antalet på en av raderna överstiger det som återstår att kreditera.",
     "credit_amount_exceeds_invoice_balance": "Kreditbeloppet överstiger fakturans utestående saldo.",
+    "unpaid_invoice_has_no_amount_due": "This invoice is unpaid but its amount due is 0, so it was held instead of sent. Check the invoice total and payments.",
     "credit_note_must_credit_something": "Välj minst en rad med ett antal att kreditera.",
     "credit_item_not_on_invoice": "En av de valda raderna tillhör inte den här fakturan.",
     "credit_quantity_invalid": "Ange ett giltigt antal större än noll på varje vald rad.",

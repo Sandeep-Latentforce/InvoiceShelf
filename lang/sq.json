@@ -2269,6 +2269,7 @@
     "invoice_already_fully_credited": "Kjo faturë nuk ka më asgjë për të kredituar.",
     "credit_quantity_exceeds_remaining": "Një nga sasitë është më e madhe se sa ka mbetur për t'u kredituar në atë rresht.",
     "credit_amount_exceeds_invoice_balance": "Krediti është më i madh se balanca e papaguar e faturës.",
+    "unpaid_invoice_has_no_amount_due": "This invoice is unpaid but its amount due is 0, so it was held instead of sent. Check the invoice total and payments.",
     "credit_note_must_credit_something": "Zgjidhni të paktën një rresht me një sasi për të kredituar.",
     "credit_item_not_on_invoice": "Një nga rreshtat e zgjedhur nuk i përket kësaj fature.",
     "credit_quantity_invalid": "Shkruani një sasi të vlefshme më të madhe se zero për çdo rresht të zgjedhur.",

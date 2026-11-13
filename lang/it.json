@@ -2269,6 +2269,7 @@
     "invoice_already_fully_credited": "Su questa fattura non resta nulla da accreditare.",
     "credit_quantity_exceeds_remaining": "Una delle quantità supera quanto resta da accreditare su quella riga.",
     "credit_amount_exceeds_invoice_balance": "L'accredito supera il saldo residuo della fattura.",
+    "unpaid_invoice_has_no_amount_due": "This invoice is unpaid but its amount due is 0, so it was held instead of sent. Check the invoice total and payments.",
     "credit_note_must_credit_something": "Seleziona almeno una riga con una quantità da accreditare.",
     "credit_item_not_on_invoice": "Una delle righe selezionate non appartiene a questa fattura.",
     "credit_quantity_invalid": "Inserisci una quantità valida maggiore di zero per ogni riga selezionata.",

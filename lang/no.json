@@ -2269,6 +2269,7 @@
     "invoice_already_fully_credited": "Det er ikke noe igjen å kreditere på denne fakturaen.",
     "credit_quantity_exceeds_remaining": "Et av antallene er større enn det som gjenstår å kreditere på linjen.",
     "credit_amount_exceeds_invoice_balance": "Kreditbeløpet er større enn fakturaens utestående saldo.",
+    "unpaid_invoice_has_no_amount_due": "This invoice is unpaid but its amount due is 0, so it was held instead of sent. Check the invoice total and payments.",
     "credit_note_must_credit_something": "Velg minst én linje med et antall som skal krediteres.",
     "credit_item_not_on_invoice": "En av de valgte linjene tilhører ikke denne fakturaen.",
     "credit_quantity_invalid": "Angi et gyldig antall større enn null for hver valgte linje.",

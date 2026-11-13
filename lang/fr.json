@@ -2269,6 +2269,7 @@
     "invoice_already_fully_credited": "Il ne reste plus rien à créditer sur cette facture.",
     "credit_quantity_exceeds_remaining": "L'une des quantités dépasse ce qu'il reste à créditer sur cette ligne.",
     "credit_amount_exceeds_invoice_balance": "Le crédit dépasse le solde restant dû de la facture.",
+    "unpaid_invoice_has_no_amount_due": "This invoice is unpaid but its amount due is 0, so it was held instead of sent. Check the invoice total and payments.",
     "credit_note_must_credit_something": "Sélectionnez au moins une ligne avec une quantité à créditer.",
     "credit_item_not_on_invoice": "L'une des lignes sélectionnées n'appartient pas à cette facture.",
     "credit_quantity_invalid": "Saisissez une quantité valide supérieure à zéro pour chaque ligne sélectionnée.",
